@@ -35,7 +35,7 @@ class Lara_admin_LaraAdmin_Task
 
 	public function resource($arguments)
 	{
-		$pluralize = new Laravel\Pluralizer();
+		$pluralize = new Laravel\Pluralizer(Laravel\Config::get('strings'));
 		foreach ($arguments as $key => $model) {
 			$content = array();
 			$nameClass = ucwords($model);
