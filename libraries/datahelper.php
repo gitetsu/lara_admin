@@ -30,6 +30,10 @@ class DataHelper
 
 				if (isset($belongModel)) {
 					$data = $belongModel->$column;
+				} else {
+					if (isset($belongData["alternative_text"])) {
+						$data = $belongData["alternative_text"];
+					}
 				}
 			}
 		}
